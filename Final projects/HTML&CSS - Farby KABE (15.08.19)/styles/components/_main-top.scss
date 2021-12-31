@@ -1,0 +1,143 @@
+.main {
+    // SWIPER CONTAINER
+    .swiper-container {
+        background-color: $main-swiper-background-color;
+        width: 100%;
+        margin-top: -135px;
+    }
+    
+    .swiper-wrapper {
+        max-width: $content-width;
+        height: 400px;
+        text-align: center;
+    }
+
+    .swiper-slide img {
+        height: 100%;
+        
+        transition-property: transform;
+        transition-duration: .8s;
+        transition-timing-function: ease-in;
+    }
+
+    .swiper-container img:hover {
+        transform: scale(1.3);
+    }
+
+    // BOTTOM-BANNER
+    .bottom-banner {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1%;
+
+        .navigation {
+            width: 100%;
+        }
+    }
+
+    .bottom-banner-card {
+        position: relative;
+        z-index: 1;
+        width: 33.33%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bottom-banner-card:first-child {
+        background-image: url(../../images/main/bottom-banner/jpeg/bestsellers.jpg);
+        background-position: 0;
+    }
+
+    .bottom-banner-card:nth-child(2) {
+        background-image: url(../../images/main/bottom-banner/jpeg/new_arrival.jpg);
+        background-position: 0;
+    }
+
+    .bottom-banner-card:last-child {
+        background-image: url(../../images/main/bottom-banner/jpeg/recommend.jpg);
+        background-position: center;
+    }
+
+    .bottom-banner-card:hover {
+        overflow: hidden;
+
+        .bottom-banner-card-link {
+            animation: button-learn-more-animation;
+            animation-duration: 1s;
+        }
+
+        .button-learn-more {
+            background-color: #1e8ed8;
+            box-shadow: 0 3px 5px 0 #adadad;
+            cursor: pointer;
+        }
+    }
+
+    .bottom-banner-card-link {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: $main-content-top-color;
+        background-color: $main-card-link-background-color;
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        text-shadow: 0 2px 5px #000;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 883px) {
+    .main {
+        .swiper-container {
+            margin-top: -160px;
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                margin-top: 60px;
+            }
+        }
+
+        .bottom-banner-card-link {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 535px) {
+    .main {
+        .bottom-banner-card-link {
+            font-size: 16px;
+        }
+
+        .main-category-choose {
+            text-align: center;
+        }
+
+        .swiper-container {
+            display: none;
+        }
+        
+        .bottom-banner {
+            margin-top: 130px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        .bottom-banner {
+            height: 150px;
+        }
+
+        .bottom-banner-card-link {
+            font-size: 14px;
+        }
+    }
+}

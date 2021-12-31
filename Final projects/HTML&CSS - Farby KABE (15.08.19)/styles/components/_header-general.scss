@@ -1,0 +1,40 @@
+// HEADER - GENERAL PROPERTIES
+.header {
+    position: relative;
+    z-index: 999;
+    
+    &-svg-image {
+        width: 8px;
+        opacity: .5;
+        
+        &-menu {
+            margin-left: 3px;
+        }
+
+        &-big {
+            width: 13px;
+        }
+    }
+
+    span {
+        font-size: 12px;
+        color: $header-cocntent-color;
+    }
+
+    .span-before-hover {
+        opacity: .5;
+    }
+
+    .content {
+        display: flex;
+        height: 100%;
+    }
+}
+
+@media (max-width: 883px) {
+    .header {
+        .content {
+            flex-wrap: wrap;
+        }
+    }
+}

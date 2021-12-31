@@ -1,0 +1,29 @@
+.header {
+    background-color: rgb(0, 115, 192);
+    
+    .content {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 2px 1px rgb(0, 0, 0);
+    }
+
+    h1 {
+        font-family: "Lobster regular", sans-serif;
+        font-size: 30px;
+    }
+
+    .header__link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .header__link:hover {
+        text-shadow: 0 2px 2px rgb(219, 219, 219);
+    }
+}

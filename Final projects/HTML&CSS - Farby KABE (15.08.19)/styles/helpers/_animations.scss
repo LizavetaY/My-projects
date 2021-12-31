@@ -1,0 +1,59 @@
+@keyframes drop-menu-icon {
+    0%, 100% {
+        transform: translate(0);
+    }
+    
+    50% {
+        transform: translate(0, 30%);
+    }
+}
+
+@keyframes button-learn-more-animation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes rating-block-status-strapes {
+    0% {
+        background-position-x: 40px;
+    }
+    
+    100% {
+        background-position-x: 0;
+    }
+}
+
+@keyframes category-card {
+    0%, 100% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes category-card-image {
+    0%, 100% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(.8);
+    }
+}
+
+@keyframes popup-elements {
+    0%, 100% {
+        transform: scale(1)
+    }
+    
+    50% {
+        transform: scale(1.2);
+    }
+}

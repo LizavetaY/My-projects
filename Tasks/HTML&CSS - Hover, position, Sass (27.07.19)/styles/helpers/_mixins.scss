@@ -1,0 +1,31 @@
+@mixin content-width($content-width) {
+    .content {
+        max-width: $content-width;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@mixin button-font-style {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@mixin button-border {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 #808080;
+}
+
+@mixin card-border {
+    border: $card-border;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 #808080;
+}
+
+@mixin input-border {
+    border: $card-border;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 #808080;
+}

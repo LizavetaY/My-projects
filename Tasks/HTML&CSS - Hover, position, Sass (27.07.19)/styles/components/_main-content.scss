@@ -1,0 +1,116 @@
+.main {
+    .content {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .example {
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .example-button {
+        @include button-font-style;
+        @include button-border;
+
+        min-width: 100px;
+        padding: 0 20px;
+        height: 50px;
+        background-color: $button-background-color;
+    }
+
+    .example1 .example-button:hover {
+        background-color: $button-background-color-hover;
+        transition: .15s ease-in;
+        cursor: pointer;
+    }
+
+    .example-card:hover {
+        .example-button {
+            transform: scale(1);
+            transition: .5s ease-out;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    }
+
+    .example-card {
+        @include card-border;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-width: 300px;
+        background-color: $card-background-color;
+    }
+
+    .card-image {
+        margin-bottom: 10px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .example-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform: scale(0);
+        }
+
+        .example-button:hover {
+            opacity: .8;
+        }
+    }
+    
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 0 10px 10px;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .form-field {
+        position: relative;
+    
+        input {
+            @include input-border;
+
+            position: relative;
+            z-index: 2;
+            width: 50%;
+            height: 40px;
+            background-color: transparent;
+            padding: 5px;
+        }
+    
+        span {
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-105%, -50%);
+            z-index: 1;
+            background-color: $body-background-color;
+            transition: .2s ease-out;
+        }
+    
+        input:valid + span {
+            top: 0;
+            left: 50%;
+            transform: translate(-105%, -50%);
+            transition: .2s ease-out;
+            z-index: 2;
+        }
+    }
+}

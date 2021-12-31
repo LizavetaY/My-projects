@@ -1,0 +1,41 @@
+.navigation {
+    a {
+        @include text-shadow-color($text-shadow-color);
+    }
+    
+    .header_element &,
+    .footer .content & {
+        display: flex;
+        justify-content: center;
+
+        a {
+            padding-right: 10px;
+        }
+    }
+
+    .main_sidebar & {
+        display: flex;
+        flex-direction: column;
+        padding: 10px; 
+        
+        a::before {
+            content: "";
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 2px 5px 2px 0;
+            background-image: url(/images/checkmark.svg);
+            background-size: contain;
+        }
+
+        a:nth-child(3n+2)::before {
+            content: "";
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 2px 5px 2px 0;
+            background-image: url(/images/checkmark_filled.svg);
+            background-size: contain;
+        }
+    }
+}

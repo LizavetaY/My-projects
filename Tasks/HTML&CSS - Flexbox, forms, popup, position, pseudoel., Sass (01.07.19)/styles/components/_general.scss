@@ -1,0 +1,10 @@
+.form_wrapper {
+    display: none;
+}
+
+.content {
+    @include content-width($content-width);
+
+    display: flex;
+    margin: 0 auto;
+}

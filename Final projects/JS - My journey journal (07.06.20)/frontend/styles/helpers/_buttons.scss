@@ -1,0 +1,49 @@
+.main {
+    .buttons {
+        margin: 0 auto;
+
+        button,
+        a {
+            font-family: "Roboto regular", sans-serif;
+            border-radius: 5px;
+            border: 1px solid rgb(128, 128, 128);
+            box-shadow: 0 0 4px rgb(128, 128, 128);
+        }
+        
+        .signUp-disabled {
+            padding: 10px 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            background-color: rgb(255, 0, 0);
+            color: rgb(202, 202, 202);
+        }
+
+        .seeMore-disabled,
+        .addTrip-disabled {
+            padding: 5px 8px;
+            font-size: 11px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(109, 109, 109);
+        }
+
+        .addTrip-disabled {
+            font-size: 12px;
+        }
+
+        .trip-button,
+        .aim-button {
+            padding: 5px;
+            margin-left: 10px;
+            font-size: 12px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .trip-button:hover,
+        .aim-button:hover {
+            cursor: pointer;
+            background-color: rgb(0, 115, 192);
+            color: rgb(255, 255, 255);
+        }
+    }
+
+}

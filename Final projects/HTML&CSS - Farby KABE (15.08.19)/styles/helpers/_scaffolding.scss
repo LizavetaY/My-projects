@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include content-width($content-width);
+
+    font-family: "Roboto light", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    min-width: 320px;
+}
+
+@media (max-width: 1210px) {
+    .content {
+        padding: 0 10px;
+    }
+}

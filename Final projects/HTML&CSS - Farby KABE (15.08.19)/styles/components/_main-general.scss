@@ -1,0 +1,134 @@
+.main {
+    flex-grow: 1;
+
+    &-svg-image {
+        width: 15px;
+        margin-right: 7px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 2%;
+        color: $main-content-color;
+    }
+
+    .bottom-banner-category {
+        margin-top: 75px;
+    }
+
+    .content-productpage {
+        margin-top: 90px;
+    }
+
+    &-block-h2 {
+        font-size: 24px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .button-learn-more {
+        margin-top: 20px;
+        padding: 10px 15px;
+        min-width: 80px;
+        background-color: $button-learn-more-background-color;
+        border: 1px solid #0469ac;
+        border-radius: 5px;
+        color: $main-content-top-color;
+        text-shadow: 0 2px 5px #000;
+        box-shadow: 0 3px 5px 0 #808080;
+        font-family: "Roboto light";
+        font-size: 16px;
+    }
+
+    .button-learn-more-content {
+        margin-top: 20px;
+        padding: 10px 15px;
+        min-width: 80px;
+        background-color: #fff;
+        border: 1px solid #0469ac;
+        border-radius: 5px;
+        color: $main-content-color;
+        text-shadow: 0 1px 5px rgb(173, 171, 171);
+        box-shadow: 0 3px 5px 0 #808080;
+        font-family: "Roboto light";
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .button-learn-more-content:hover {
+        background-color: #d4d1d1;
+        box-shadow: 0 3px 5px 0 #3a3939;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1070px) {
+    .main .content {
+        flex-direction: column;
+    }
+
+    .main-block-h2 {
+        width: 100%;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .main .button-learn-more-content {
+        margin-top: 10px;
+        padding: 8px 10px;
+        min-width: 60px;
+        font-size: 13px;
+    }
+
+    .main-products .main-block-h2 {
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 883px) {
+    .main {
+        .button-learn-more {
+            font-size: 13px;
+        }
+
+        .content-productpage,
+        .bottom-banner-category {
+            margin-top: 100px;
+        }
+    }
+}
+
+@media (max-width: 535px) {
+    .main {
+        .content-productpage,
+        .bottom-banner-category {
+            margin-top: 130px;
+        }
+
+        .button-learn-more {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        &-block-h2 {
+            font-size: 20px;
+            padding: 8px 0;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        .button-learn-more {
+            display: none;
+        }
+    }
+}
+

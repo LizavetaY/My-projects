@@ -1,0 +1,43 @@
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+
+    .content {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    &_table {
+        margin: 0 auto;
+        min-width: 800px;
+        border-collapse: collapse;
+        font-size: 18px;
+    }
+    
+    &_table td {
+        border: 1px solid #ccc;
+        width: 33.33%;
+        height: 50px;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    &_table tr {
+        font-weight: 400;
+        text-align: left;
+    }
+
+    &_table tr:last-child {
+        font-weight: 700;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+input {
+    width: 100%;
+    border: none;
+    height: 20px;
+}

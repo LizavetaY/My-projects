@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Category</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://picsum.photos/16/16">
+    <link rel="stylesheet" href="styles/fonts/fonts.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <script defer src="/code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script defer src="jQuery/jquery.maskedinput.min.js"></script>
+    <script defer src="js/scroll-up.js"></script>
+    <script defer src="js/common.js"></script>
+</head>
+
+<body>
+    <header id="up-page" class="header">
+        <div class="header-top">
+            <div class="content">
+                <nav class="navigation header-top-block-left">
+                    <a target="_blank" href="index.html">
+                        <img src="images/header/png/logo_top.png" alt="Farby KABE logo" title="Farby KABE logo">
+                    </a>
+                    <h1>Farby KABE</h1>
+                </nav>
+                <div class="header-top-block header-top-block-center">
+                    <div class="contact-wrapper contact-phone">
+                        <div class="contact">
+                            <img class="header-svg-image" src="images/header/svg/mobile_icon.svg" alt="mobile icon"
+                                title="">
+                            <span>+375(29) 123-45-67</span>
+                            <span class="span-before-hover">Контакты</span>
+                            <img class="header-svg-image header-svg-image-menu"
+                                src="images/header/svg/drop-menu_icon.svg" alt="drop-menu icon" title="">
+                        </div>
+                        <div class="drop-menu-wrapper contact-drop-menu-wrapper">
+                            <nav class="navigation">
+                                <div class="contact-block contact-call-back-wrapper">
+                                    <span class="contact-span">Обратный звонок</span>
+                                    <div class="contact-call-back drop-menu-block-hover jsPopupShow">
+                                        <img class="contact-svg-image"
+                                            src="images/header/drop-menu/svg/phone-volume_icon.svg"
+                                            alt="phone-volume icon" title="">
+                                        <span>Нажмите, и мы перезвоним Вам</span>
+                                    </div>
+                                </div>
+                                <div class="contact-block contact-our-phones">
+                                    <span class="contact-span">Наши телефоны</span>
+                                    <a class="contact-call-back drop-menu-block-hover" href="tel: +375(33)123-45-67">
+                                        <img class="contact-svg-image" src="images/header/drop-menu/svg/phone_icon.svg"
+                                            alt="phone-volume icon" title="">
+                                        <span>+375(33) 123-45-67</span>
+                                    </a>
+                                    <a class="contact-call-back drop-menu-block-hover" href="tel: +375(44)456-78-90">
+                                        <img class="contact-svg-image" src="images/header/drop-menu/svg/phone_icon.svg"
+                                            alt="phone-volume icon" title="">
+                                        <span>+375(44) 456-78-90</span>
+                                    </a>
+                                </div>
+                                <div class="contact-block contact-worktime">
+                                    <span class="contact-span">Время работы</span>
+                                    <div class="contact-call-back">
+                                        <img class="contact-svg-image" src="images/header/drop-menu/svg/clock_icon.svg"
+                                            alt="phone-volume icon" title="">
+                                        <span class="contact-span">Пн-Пт 10:00 - 20:00</span>
+                                    </div>
+                                </div>
+                                <div class="contact-block contact-address">
+                                    <span class="contact-span">Наш адрес</span>
+                                    <a class="contact-call-back drop-menu-block-hover" target="_blank"
+                                        href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%A1%D0%BA%D1%80%D1%8B%D0%B3%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0+14,+%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.9091335,27.5205464,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbc55f35bf3dad:0xaabda25bdeeb761f!8m2!3d53.9091335!4d27.5227351?hl=ru">
+                                        <img class="contact-svg-image"
+                                            src="images/header/drop-menu/svg/map-signs_icon.svg" alt="phone-volume icon"
+                                            title="">
+                                        <span class="contact-span">г.Минск, ул.Скрыганова 14</span>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <nav class=" navigation">
+                        <a target="_blank" href="about.html" class="contact-wrapper">
+                            <span class="span-before-hover">Доставка</span>
+                        </a>
+                        <a target="_blank" href="about.html" class="contact-wrapper">
+                            <span class="span-before-hover">Оплата</span>
+                        </a>
+                        <a target="_blank" href="about.html" class="contact-wrapper">
+                            <span class="span-before-hover">О нас</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="header-top-block header-top-block-right">
+                    <div class="contact-wrapper contact-cart">
+                        <div class="svg-cart-wrapper">
+                            <img class="header-svg-image header-svg-image-big"
+                                src="images/header/svg/shopping-cart_icon.svg" alt="shopping-cart icon" title="">
+                        </div>
+                        <span class="span-before-hover">Корзина</span>
+                        <img class="header-svg-image header-svg-image-menu" src="images/header/svg/drop-menu_icon.svg"
+                            alt="drop-menu icon" title="">
+                        <div id="cart" class="drop-menu-wrapper cart-drop-menu-wrapper">
+                            <span class="cart-main-span">Товары в корзине</span>
+                            <form action="">
+                                <nav class="navigation">
+                                    <input class="cart-input1" type="checkbox" name="" id="cart-block-close1">
+                                    <div class="cart-block">
+                                        <a class="cart-product-wrapper" target="_blank" href="product.html">
+                                            <img class="cart-image" src="images/main/content/jpeg/paint.jpg"
+                                                alt="phone-volume icon" title="">
+                                            <span>Название товара</span>
+                                            <div class="cart-price">
+                                                <span>$ 80</span>
+                                            </div>
+                                        </a>
+                                        <div class="cart-block-delete">
+                                            <label for="cart-block-close1">
+                                                <img class="cart-svg-image"
+                                                    src="images/header/drop-menu/svg/close_icon.svg" alt="close icon"
+                                                    title="">
+                                                <div class="cart-block-delete-clue">
+                                                    <span>Удалить</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="cart-input-cancel cart-input1-cancel">
+                                            <label for="cart-block-close1">
+                                                <span>Отменить</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input class="cart-input2" type="checkbox" name="" id="cart-block-close2">
+                                    <div class="cart-block">
+                                        <a class="cart-product-wrapper" target="_blank" href="product.html">
+                                            <img class="cart-image" src="images/main/content/jpeg/paint.jpg"
+                                                alt="phone-volume icon" title="">
+                                            <span>Название товара</span>
+                                            <div class="cart-price">
+                                                <span>$ 120</span>
+                                            </div>
+                                        </a>
+                                        <div class="cart-block-delete">
+                                            <label for="cart-block-close2">
+                                                <img class="cart-svg-image"
+                                                    src="images/header/drop-menu/svg/close_icon.svg" alt="close icon"
+                                                    title="">
+                                                <div class="cart-block-delete-clue">
+                                                    <span>Удалить</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="cart-input-cancel cart-input2-cancel">
+                                            <label for="cart-block-close2">
+                                                <span>Отменить</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input class="cart-input3" type="checkbox" name="" id="cart-block-close3">
+                                    <div class="cart-block">
+                                        <a class="cart-product-wrapper" target="_blank" href="product.html">
+                                            <img class="cart-image" src="images/main/content/jpeg/paint.jpg"
+                                                alt="phone-volume icon" title="">
+                                            <span>Название товара</span>
+                                            <div class="cart-price">
+                                                <span>$ 90</span>
+                                            </div>
+                                        </a>
+                                        <div class="cart-block-delete">
+                                            <label for="cart-block-close3">
+                                                <img class="cart-svg-image"
+                                                    src="images/header/drop-menu/svg/close_icon.svg" alt="close icon"
+                                                    title="">
+                                                <div class="cart-block-delete-clue">
+                                                    <span>Удалить</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="cart-input-cancel cart-input3-cancel">
+                                            <label for="cart-block-close3">
+                                                <span>Отменить</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input class="cart-input4" type="checkbox" name="" id="cart-block-close4">
+                                    <div class="cart-block">
+                                        <a class="cart-product-wrapper" target="_blank" href="product.html">
+                                            <img class="cart-image" src="images/main/content/jpeg/paint.jpg"
+                                                alt="phone-volume icon" title="">
+                                            <span>Название товара</span>
+                                            <div class="cart-price cart-price-sale">
+                                                <span>$ 30</span>
+                                            </div>
+                                        </a>
+                                        <div class="cart-block-delete">
+                                            <label for="cart-block-close4">
+                                                <img class="cart-svg-image"
+                                                    src="images/header/drop-menu/svg/close_icon.svg" alt="close icon"
+                                                    title="">
+                                                <div class="cart-block-delete-clue">
+                                                    <span>Удалить</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="cart-input-cancel cart-input4-cancel">
+                                            <label for="cart-block-close4">
+                                                <span>Отменить</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-wrapper">
+                        <img class="header-svg-image header-svg-image-big" src="images/header/svg/search_icon.svg"
+                            alt="search icon" title="">
+                        <div class="drop-menu-wrapper contact-search-wrapper">
+                            <input type="text" name="" placeholder="Поиск товара по каталогу">
+                            <div class="search-button">
+                                <img class="search-svg-image" src="images/header/drop-menu/svg/search_icon.svg"
+                                    alt="search icon" title="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-wrapper">
+                        <img class="header-svg-image header-svg-image-big" src="images/header/svg/globe_icon.svg"
+                            alt="globe icon" title="">
+                        <div class="drop-menu-wrapper contact-language-wrapper">
+                            <div class="drop-menu-block-hover language-block">
+                                <img class="language-image" src="images/header/drop-menu/png/flag-RU_icon.png"
+                                    alt="flag-RU icon" title="">
+                                <span>Русский</span>
+                            </div>
+                            <div class="drop-menu-block-hover language-block">
+                                <img class="language-image" src="images/header/drop-menu/png/flag-EN_icon.png"
+                                    alt="flag-EN icon" title="">
+                                <span>English</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-wrapper">
+                        <img class="header-svg-image" src="images/header/svg/dollar-sign_icon.svg"
+                            alt="dollar sign icon" title="">
+                        <div class="drop-menu-wrapper contact-currency-wrapper">
+                            <div class="drop-menu-block-hover currency-block">
+                                <img class="currency-svg-image" src="images/header/drop-menu/svg/coins_icon.svg"
+                                    alt="coins icon" title="">
+                                <span>BYN бел.руб.</span>
+                            </div>
+                            <div class="drop-menu-block-hover currency-block">
+                                <img class="currency-svg-image" src="images/header/drop-menu/svg/dollar-sign_icon.svg"
+                                    alt="dollar-sign icon" title="">
+                                <span>US Dollar</span>
+                            </div>
+                            <div class="drop-menu-block-hover currency-block">
+                                <img class="currency-svg-image" src="images/header/drop-menu/svg/euro-sign_icon.svg"
+                                    alt="euro-sign icon" title="">
+                                <span>&euro; Euro</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-wrapper">
+                        <img class="header-svg-image header-svg-image-big" src="images/header/svg/bars_icon.svg"
+                            alt="bars icon" title="">
+                        <div class="drop-menu-wrapper contact-bars-wrapper">
+                            <span class="contact-span">Личный кабинет</span>
+                            <div class="drop-menu-block-hover bars-block">
+                                <img class="bars-svg-image" src="images/header/drop-menu/svg/sign-in_icon.svg"
+                                    alt="sign-in icon" title="">
+                                <span>Авторизация / Регистрация</span>
+                            </div>
+                            <div class="drop-menu-block-hover bars-block">
+                                <img class="bars-svg-image" src="images/header/drop-menu/svg/heart_icon.svg"
+                                    alt="heart icon" title="">
+                                <span>Мои закладки (0)</span>
+                            </div>
+                            <div class="drop-menu-block-hover bars-block">
+                                <img class="bars-svg-image" src="images/header/drop-menu/svg/graphic_icon.svg"
+                                    alt="graphic icon" title="">
+                                <span>Сравнение товаров (0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="bottom-banner bottom-banner-category">
+            <nav class="navigation">
+                <div class="bottom-banner-card">
+                    <div class="bottom-banner-card-link">
+                        <span>Лидеры продаж</span>
+                        <a target="_blank" href="product.html">
+                            <button class="button-learn-more">Узнать больше</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom-banner-card">
+                    <div class="bottom-banner-card-link">
+                        <span>Новые поступления</span>
+                        <a target="_blank" href="product.html">
+                            <button class="button-learn-more">Узнать больше</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom-banner-card">
+                    <div class="bottom-banner-card-link">
+                        <span>Рекомендуем</span>
+                        <a target="_blank" href="product.html">
+                            <button class="button-learn-more">Узнать больше</button>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="main-block main-category productpage-main-category">
+                <div class="main-block-h2">
+                    <h2>Категории</h2>
+                </div>
+                <nav class="navigation">
+                    <div class="productpage-main-category-choose-wrapper">
+                        <div class="productpage-main-category-choose-block">
+                            <a class="main-category-choose" target="_blank" href="category.html">
+                                <img class="main-svg-image" src="images/main/content/svg/building_icon.svg"
+                                    alt="building icon" title="">
+                                <span>Продукты для фасада</span>
+                            </a>
+                            <div class="productpage-category-info-wrapper">
+                                <nav class="navigation">
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Системы утепления фасадов зданий
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Тонкослойные штукатурки
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Грунтовочные штукатурки
+                                    </a>
+                                    <a target="_blank" href="category.html" class="productpage-category-info-link">Клеи
+                                        для систем утепления
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Краски</a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Грунтовочные препараты
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Дополнительные материалы
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productpage-main-category-choose-wrapper">
+                        <div class="productpage-main-category-choose-block">
+                            <a class="main-category-choose" target="_blank" href="category.html">
+                                <img class="main-svg-image" src="images/main/content/svg/building-inside_icon.svg"
+                                    alt="building-inside icon" title="">
+                                <span>Продукты для внутренних работ</span>
+                            </a>
+                            <div class="productpage-category-info-wrapper">
+                                <nav class="navigation">
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Краски</a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Грунтовочные препараты
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Шпаклевки</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productpage-main-category-choose-wrapper">
+                        <div class="productpage-main-category-choose-block">
+                            <a class="main-category-choose" target="_blank" href="category.html">
+                                <img class="main-svg-image" src="images/main/content/svg/paint-roller_icon.svg"
+                                    alt="paint-roller icon" title="">
+                                <span>Вспомогательные материалы</span>
+                            </a>
+                            <div class="productpage-category-info-wrapper">
+                                <nav class="navigation">
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Удаление грибка и плесени
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Гидрофобная пропитка</a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Финишные покрытия
+                                    </a>
+                                    <a target="_blank" href="category.html"
+                                        class="productpage-category-info-link">Добавки для штукатурки, красок
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="main-block-pages main-rating-pages">
+                    <div class="main-block-h2">
+                        <h2>Нам верят</h2>
+                    </div>
+                    <div class="rating-block">
+                        <span class="rating-block-buy-span">Успешные покупки</span>
+                        <div class="rating-block-status-general">
+                            <div class="rating-block-status rating-block-buy">
+                                <span class="rating-block-status-span">800/820 заказов</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-block">
+                        <span class="rating-block-star-span">Товары с оценкой 5 звезд</span>
+                        <div class="rating-block-status-general">
+                            <div class="rating-block-status rating-block-star">
+                                <span class="rating-block-status-span">20/30 моделей</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-block">
+                        <span class="rating-block-buyer-span">Постоянные покупатели</span>
+                        <div class="rating-block-status-general">
+                            <div class="rating-block-status rating-block-buyer">
+                                <span class="rating-block-status-span">78% клиентов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-block main-products">
+                <div class="main-info">
+                    <div class="main-block-h2">
+                        <h2>Категории</h2>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <nav class="navigation">
+                        <div class="category-card">
+                            <a class="category-card-link" href="product.html">
+                                <img class="category-card-image" src="images/main/content/jpeg/fasad.jpg"
+                                    alt="fasad photo" title="">
+                                <span>Продукты для фасада</span>
+                            </a>
+                        </div>
+                        <div class="category-card">
+                            <a class="category-card-link" href="product.html">
+                                <img class="category-card-image" src="images/main/content/jpeg/inside.jpg"
+                                    alt="inside photo" title="">
+                                <span>Продукты для внутренних работ</span>
+                            </a>
+                        </div>
+                        <div class="category-card">
+                            <a class="category-card-link" href="product.html">
+                                <img class="category-card-image" src="images/main/content/jpeg/other.jpg"
+                                    alt="other photo" title="">
+                                <span>Вспомогательные материалы</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="content">
+                <div class="footer-block footer-block-left">
+                    <nav class="navigation">
+                        <a class="footer-block-left-link" href="https://www.facebook.com" target="_blank">
+                            <img class="footer-svg-image" src="images/footer/svg/facebook_icon.svg" alt="facebook icon"
+                                title="">
+                        </a>
+                        <a class="footer-block-left-link" href="https://twitter.com/" target="_blank">
+                            <img class="footer-svg-image" src="images/footer/svg/twitter_icon.svg" alt="twitter icon"
+                                title="">
+                        </a>
+                        <a class="footer-block-left-link" href="https://google.com" target="_blank">
+                            <img class="footer-svg-image" src="images/footer/svg/google-plus_icon.svg"
+                                alt="google-plus icon" title="">
+                        </a>
+                        <a class="footer-block-left-link" href="https://vk.com/" target="_blank">
+                            <img class="footer-svg-image" src="images/footer/svg/vk_icon.svg" alt="vk icon" title="">
+                        </a>
+                    </nav>
+                </div>
+                <div class="footer-block footer-block-right">
+                    <span>Farby KABE</span>
+                    <span>Швейцарское качество</span>
+                    <nav class="navigation">
+                        <a class="footer-up-link scrollup" href="#up-page"></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="popup-contact-wrapper jsPopup">
+        <div class="popup-contact">
+            <form class="popup-form" action="">
+                <span class="popup-span-main">Обратный звонок</span>
+                <div class="popup-content-wrapper">
+                    <label class="popup-content" for="popup-input-phone">
+                        <span class="popup-span">
+                            <span class="popup-span popup-span-required">*</span>Телефон</span>
+                        <input id="popup-input-phone" class="popup-input popup-input-phone" required autofocus
+                            maxlength="9" type="text" placeholder="+375(__) ___-__-__">
+                    </label>
+                    <label class="popup-content" for="">
+                        <span class="popup-span">Опционально</span>
+                        <input class="popup-input popup-input-name" type="text" placeholder="Ваше имя">
+                        <input class="popup-input popup-input-comment" type="text" placeholder="Комментарий">
+                    </label>
+                </div>
+                <div class="popup-content popup-content-part">
+                    <p>Нажмите Отправить, чтобы сделать запрос, и мы Вам скоро перезвоним</p>
+                </div>
+                <div class="popup-content popup-buttons-wrapper">
+                    <nav class="navigation">
+                        <a class="popup-link" href="index.html">
+                            <button class="popup-button popup-button-send">
+                                <img class="popup-svg-image" src="images/popup/svg/share_icon.svg" alt="share icon"
+                                    title="">
+                                <span>Отправить</span>
+                            </button>
+                        </a>
+                        <button class="popup-button popup-button-begin jsPopupClose">
+                            <span>Продолжить покупки</span>
+                        </button>
+                    </nav>
+                </div>
+            </form>
+            <div class="popup-close jsPopupClose">
+                <img class="popup-svg-image" src="images/popup/svg/close_icon.svg" alt="close icon" title="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

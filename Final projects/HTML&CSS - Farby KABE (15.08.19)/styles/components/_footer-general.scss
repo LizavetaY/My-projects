@@ -1,0 +1,29 @@
+.footer {
+    &-wrapper {
+        background-color: $header-top-background-color;
+    }
+    
+    .content {
+        display: flex;
+        align-items: center;
+    }
+
+    &-svg-image {
+        max-width: 30px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 535px) {
+    .footer-wrapper {
+        background-color: #000;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        .content {
+            flex-direction: column;
+        }
+    }
+}

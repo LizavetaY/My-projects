@@ -1,0 +1,52 @@
+// BOTTOM HEADER
+.header-bottom {
+    background-color: $header-bottom-background-color;
+    margin-top: 75px;
+    height: 60px;
+
+    .info-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top: 3px solid transparent;
+    }
+
+    .info-wrapper:hover {
+        border-top: 3px solid #0480d3;
+    
+        transition-property: border-top;
+        transition-duration: .7s;
+        transition-timing-function: ease-out;
+    
+        .header-svg-image,
+        .span-before-hover {
+            opacity: 1;
+        }
+    
+        .header-svg-image-menu {
+            animation-name: drop-menu-icon;
+            animation-duration: .5s;
+        }
+
+        .bottom-info-wrapper {
+            transform: scale(1);
+            transition-property: transform;
+            transition-duration: .3s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    }
+}
+
+@media (max-width: 883px) {
+    .header-bottom {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 580px) {
+    .header-bottom {
+        display: none;
+    }
+}

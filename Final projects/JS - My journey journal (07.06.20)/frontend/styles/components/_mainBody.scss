@@ -1,0 +1,386 @@
+.main {
+    flex-grow: 1;
+    
+    .content {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, .9);
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(128, 128, 128);
+    }
+    
+    .loading-title,
+    .page404-title {
+        font-family: "Lobster regular", sans-serif;
+        color: rgb(0, 124, 173);
+        text-shadow: 0 2px 3px rgb(190, 190, 190);
+        font-size: 40px;
+        margin: auto;
+        transform: translateX(70%);
+    }
+
+    // ABOUT PAGE
+    .about-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        padding: 30px;
+        line-height: 1.5;
+        background-color: rgb(255, 255, 255);
+
+        p, ul {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+    }
+
+    .about-title {
+        font-family: "Lobster regular", sans-serif;
+        font-size: 30px;
+        margin: 20px auto;
+        color: rgb(0, 124, 173);
+        text-shadow: 0 2px 3px rgb(190, 190, 190);
+    }
+
+    //MAIN PAGE
+        // MAP: conteiner, interaction
+    .map-conteiner {
+        width: 70%;
+        height: 100%;
+        overflow: scroll;
+        min-width: 649px;
+        min-height: 400px;
+
+        background-color: rgb(219, 250, 255);
+        border: 15px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        box-shadow: 0 0 3px 2px rgb(177, 177, 177);
+    }
+
+    .country {
+        fill: rgb(245, 245, 245);
+        stroke: rgb(0, 0, 0);
+        stroke-width: 0.5px;
+    }
+    
+    .country_visited {
+        fill: rgb(255, 215, 0);
+        stroke: rgb(0, 0, 0);
+        stroke-width: 0.5px;
+    }
+    
+    .country_planned {
+        fill: rgb(153, 153, 153);
+        stroke: rgb(0, 0, 0);
+        stroke-width: 0.5px;
+    }
+
+    .country:hover,
+    .country_visited:hover,
+    .country_planned:hover {
+        fill: rgb(0, 115, 192);
+    }
+
+        // INFO, conteiner, interaction
+    .info-wrapper {
+        width: 28%;
+        height: 100%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        box-shadow: 0 0 3px 2px rgb(177, 177, 177);
+    }
+
+    span {
+        font-family: "Roboto bold", sans-serif;
+        text-shadow: 0 1px 2px rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .countriesCounter {
+        width: 100%;
+        height: 15%;
+        font-size: 16px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p:nth-child(n+2) {
+            margin-top: 5px;
+        }
+    }
+
+    .countriesAll {
+        color: rgb(0, 115, 192);
+    }
+
+    .countriesVisited {
+        color: rgb(255, 215, 0);
+    }
+
+    .countriesPlanned {
+        color: rgb(153, 153, 153);
+    }
+
+    .countriesLeft {
+        color: rgb(255, 0, 0);
+    }
+
+    .countriesJournal {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 85%;
+    }
+
+    .journalBlock {
+        height: 32%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        h2 {
+            font-family: "Lobster regular", sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+            color: rgb(0, 124, 173);
+            text-shadow: 0 2px 3px rgb(192, 192, 192);
+        }
+    }
+
+    .journalBlock:nth-child(n) {
+        margin-top: 1%;
+        border-top: 1px solid rgb(226, 226, 226);
+    }
+
+    .tripsBlockWrapper,
+    .aimsBlockWrapper {
+        overflow-y: scroll;
+        width: 100%;
+        margin: 5px 0;
+        padding: 0 2px;
+    }
+
+    .aimsBlockWrapper {
+        text-align: center;
+    }
+
+    .tripBlock,
+    .aimBlock {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 5px 5px 5px 10px;
+        margin-bottom: 5px;
+        font-family: "Roboto regular", sans-serif;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 1px solid rgb(190, 190, 190);
+        
+        .trip-info-buttons a img {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    .tripBlock {
+        align-items: flex-start;
+        cursor: pointer;
+    }
+
+    .aimBlock {
+        align-items: center;
+    }
+    
+    .tripBlock:hover,
+    .aimBlock:hover {
+        background-color: rgb(255, 215, 0);
+        box-shadow: 0 0 2px rgb(128, 128, 128);
+    }
+
+    .trip-info p,
+    .trip-aims p {
+        margin-top: 3px;
+    }
+
+    // TRIP PAGES
+    .trip-title {
+        font-family: "Lobster regular", sans-serif;
+        font-size: 30px;
+        margin: 0 auto;
+        color: rgb(0, 124, 173);
+        text-shadow: 0 2px 3px rgb(190, 190, 190);
+    }
+
+    .aims-title {
+        font-family: "Lobster regular", sans-serif;
+        font-size: 25px;
+        margin-top: 20px;
+        color: rgb(0, 124, 173);
+        text-shadow: 0 2px 3px rgb(190, 190, 190);
+        text-align: center;
+    }
+
+    .trip-wrapper {
+        height: 100%;
+        padding: 50px;
+        background-color: rgb(255, 255, 255);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+        // Add page
+    .trip-add-buttons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+        // Info page
+    .trip-block,
+    .aim-block {
+        margin-top: 10px;
+        padding: 5px;
+        border-top: 1px solid rgb(206, 206, 206);
+    }
+
+    .trip-info-buttons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+
+    .trip-aim-buttons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 10px 0 5px;
+    }
+    
+    .trip-info,
+    .trip-aims {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .trip-status-open {
+        font-weight: 700;
+        color: rgb(0, 128, 0);
+    }
+
+    .trip-status-closed {
+        font-weight: 700;
+        color: rgb(255, 0, 0);
+    }
+
+    .trip-info-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 3px;
+        margin-top: 5px;
+        
+        td {
+            font-family: "Roboto light", sans-serif;
+            font-size: 14px;
+            border: 1px solid rgb(190, 190, 190);
+            overflow-y: scroll;
+            padding: 5px 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+        td:first-child,
+        .budget-title {
+            width: 28%;
+            font-family: "Lobster regular", sans-serif;
+            font-size: 16px;
+            background-color: rgba(0, 183, 255, 0.3);
+        }
+
+        .budget-td {
+            font-size: 12px;
+            font-weight: 700;
+            width: 14%;
+        }
+    }
+
+    .trip-aims-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 3px;
+
+        td {
+            font-family: "Roboto light", sans-serif;
+            font-size: 14px;
+            border: 1px solid rgb(190, 190, 190);
+            overflow-y: scroll;
+            padding: 5px 10px;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        td:first-child,
+        td:nth-child(3) {
+            width: 25%;
+            font-family: "Lobster regular", sans-serif;
+            font-size: 16px;
+            background-color: rgba(175, 232, 255, 0.3);
+        }
+
+        td:nth-child(3) {
+            width: 20%;
+            text-align: center;
+            color: rgb(27, 143, 27);
+            text-shadow: 0 1px 2px rgb(190, 190, 190);
+        }
+
+        .aim-description {
+            max-height: 70px;
+            overflow-y: scroll;
+        }
+    }
+
+        // Edit page
+    .trip-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trip-info-table {
+        td input {
+            padding: 2px 5px;
+            width: 150px;
+            font-size: 12px;
+        }
+
+        .tripBudget {
+            width: 45px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.header {
+    color: $primary-text-color;
+    background-color: $secondary-background-color;
+    border-bottom: 1px solid #666565;
+    box-shadow: 0 2px 5px 0 #757373;
+    position: relative;
+    z-index: 5;
+
+    &_element {
+        width: 33.33%;
+        font-size: 14px;
+        align-self: center;
+    }
+
+    &_logo {
+        text-align: left;
+
+        img {
+            width: $image-width;
+        }
+    }
+
+    &_button {
+        display: flex;
+        justify-content: end;
+    }
+
+    .contact_us_block {
+        @include button-box-shadow($button-shadow-color);
+
+        padding: 10px 20px;  
+        border-radius: 5px;
+        transition: 0.25s;
+        font-size: 12px;
+    }
+}
+
+#contact_us {
+    display: none;
+}
+
+#contact_us:checked + .form_wrapper {
+    transform: none;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+#contact_us:checked + .form_wrapper .content_form {
+    transition-delay: 0.25s;
+    transform: none;
+    opacity: 1;
+}

@@ -1,0 +1,27 @@
+body {
+    font-family: "Roboto light", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    background-image: url(../../../frontend/images/backgrounds/jpegJpg/LoadingPage.jpeg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    min-width: 700px;
+
+    .content {
+        max-width: $content-width;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.mainBody {
+    background-color: rgb(173, 216, 230);
+    background-image: url(../../../frontend/images/backgrounds/png/sky.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}

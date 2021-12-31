@@ -1,0 +1,50 @@
+// WIDTH
+@mixin content-width($content-width) {
+    max-width: $content-width;
+    width: 100%;
+}
+
+@mixin form-width($form-width) {
+    max-width: $form-width;
+    width: 100%;
+}
+
+
+// SHADOW COLOR (+HOVER)
+@mixin text-shadow-color($text-shadow-color) {
+    text-decoration: none;
+    color: $primary-text-color;
+
+    &:hover {
+        text-decoration: underline;
+        color: $nav-hover-color;
+        text-shadow: 0 2px 2px $text-shadow-color;
+
+        transition: .1s;
+    }
+}
+
+@mixin button-box-shadow($button-shadow-color) {
+    background-color: $button-color;
+    color: $secondary-text-color;
+    font-weight: 700;
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: 0 2px 5px 0 $button-shadow-color;
+
+        transition: .3s;
+    }
+}
+
+@mixin main-box-shadow($box-shadow-color) {
+    box-shadow: none;
+    background-color: $primary-background-color;
+
+    &:hover {
+        box-shadow: 0 2px 5px 0 $box-shadow-color;
+        background-color: $backgroung-color-hover-card;
+
+        transition: .5s;
+    }
+}

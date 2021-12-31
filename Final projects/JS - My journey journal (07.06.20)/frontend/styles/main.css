@@ -1,0 +1,734 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto light";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../../frontend/styles/fonts/Roboto/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../frontend/styles/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../../frontend/styles/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lobster regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../frontend/styles/fonts/Lobster/Lobster-Regular.ttf) format("truetype");
+}
+
+body {
+  font-family: "Roboto light", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-image: url(../../../frontend/images/backgrounds/jpegJpg/LoadingPage.jpeg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  min-width: 700px;
+}
+
+body .content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mainBody {
+  background-color: lightblue;
+  background-image: url(../../../frontend/images/backgrounds/png/sky.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.main .buttons {
+  margin: 0 auto;
+}
+
+.main .buttons button,
+.main .buttons a {
+  font-family: "Roboto regular", sans-serif;
+  border-radius: 5px;
+  border: 1px solid gray;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
+}
+
+.main .buttons .signUp-disabled {
+  padding: 10px 20px;
+  margin-top: 30px;
+  font-size: 14px;
+  background-color: red;
+  color: #cacaca;
+}
+
+.main .buttons .seeMore-disabled,
+.main .buttons .addTrip-disabled {
+  padding: 5px 8px;
+  font-size: 11px;
+  background-color: white;
+  color: #6d6d6d;
+}
+
+.main .buttons .addTrip-disabled {
+  font-size: 12px;
+}
+
+.main .buttons .trip-button,
+.main .buttons .aim-button {
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.main .buttons .trip-button:hover,
+.main .buttons .aim-button:hover {
+  cursor: pointer;
+  background-color: #0073c0;
+  color: white;
+}
+
+#calendar {
+  width: 100%;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+
+#calendar thead tr:last-child {
+  font-size: small;
+  color: #555555;
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(2) {
+  color: #323232;
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+
+#calendar tbody td {
+  color: #2c567a;
+}
+
+#calendar tbody td:nth-child(n+6),
+#calendar .holiday {
+  color: #e78c5c;
+}
+
+#calendar tbody td.today {
+  background: #dc0000;
+  border: 1px solid gray;
+  color: white;
+  cursor: pointer;
+}
+
+#calendar tbody td.trips {
+  background: #009edd;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #0073c0;
+}
+
+.header .content {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 2px 1px black;
+}
+
+.header h1 {
+  font-family: "Lobster regular", sans-serif;
+  font-size: 30px;
+}
+
+.header .header__link {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.header .header__link:hover {
+  text-shadow: 0 2px 2px #dbdbdb;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px gray;
+          box-shadow: 0 0 5px gray;
+}
+
+.main .loading-title,
+.main .page404-title {
+  font-family: "Lobster regular", sans-serif;
+  color: #007cad;
+  text-shadow: 0 2px 3px #bebebe;
+  font-size: 40px;
+  margin: auto;
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+}
+
+.main .about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  padding: 30px;
+  line-height: 1.5;
+  background-color: white;
+}
+
+.main .about-wrapper p, .main .about-wrapper ul {
+  margin-top: 20px;
+}
+
+.main .about-wrapper ul {
+  list-style-type: disc;
+}
+
+.main .about-title {
+  font-family: "Lobster regular", sans-serif;
+  font-size: 30px;
+  margin: 20px auto;
+  color: #007cad;
+  text-shadow: 0 2px 3px #bebebe;
+}
+
+.main .map-conteiner {
+  width: 70%;
+  height: 100%;
+  overflow: scroll;
+  min-width: 649px;
+  min-height: 400px;
+  background-color: #dbfaff;
+  border: 15px solid white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 3px 2px #b1b1b1;
+          box-shadow: 0 0 3px 2px #b1b1b1;
+}
+
+.main .country {
+  fill: whitesmoke;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.main .country_visited {
+  fill: gold;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.main .country_planned {
+  fill: #999999;
+  stroke: black;
+  stroke-width: 0.5px;
+}
+
+.main .country:hover,
+.main .country_visited:hover,
+.main .country_planned:hover {
+  fill: #0073c0;
+}
+
+.main .info-wrapper {
+  width: 28%;
+  height: 100%;
+  margin-left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 3px 2px #b1b1b1;
+          box-shadow: 0 0 3px 2px #b1b1b1;
+}
+
+.main span {
+  font-family: "Roboto bold", sans-serif;
+  text-shadow: 0 1px 2px black;
+  cursor: pointer;
+}
+
+.main .countriesCounter {
+  width: 100%;
+  height: 15%;
+  font-size: 16px;
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .countriesCounter p:nth-child(n+2) {
+  margin-top: 5px;
+}
+
+.main .countriesAll {
+  color: #0073c0;
+}
+
+.main .countriesVisited {
+  color: gold;
+}
+
+.main .countriesPlanned {
+  color: #999999;
+}
+
+.main .countriesLeft {
+  color: red;
+}
+
+.main .countriesJournal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 85%;
+}
+
+.main .journalBlock {
+  height: 32%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .journalBlock h2 {
+  font-family: "Lobster regular", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  color: #007cad;
+  text-shadow: 0 2px 3px silver;
+}
+
+.main .journalBlock:nth-child(n) {
+  margin-top: 1%;
+  border-top: 1px solid #e2e2e2;
+}
+
+.main .tripsBlockWrapper,
+.main .aimsBlockWrapper {
+  overflow-y: scroll;
+  width: 100%;
+  margin: 5px 0;
+  padding: 0 2px;
+}
+
+.main .aimsBlockWrapper {
+  text-align: center;
+}
+
+.main .tripBlock,
+.main .aimBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 5px 5px 10px;
+  margin-bottom: 5px;
+  font-family: "Roboto regular", sans-serif;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #bebebe;
+}
+
+.main .tripBlock .trip-info-buttons a img,
+.main .aimBlock .trip-info-buttons a img {
+  width: 12px;
+  height: 12px;
+}
+
+.main .tripBlock {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+}
+
+.main .aimBlock {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .tripBlock:hover,
+.main .aimBlock:hover {
+  background-color: gold;
+  -webkit-box-shadow: 0 0 2px gray;
+          box-shadow: 0 0 2px gray;
+}
+
+.main .trip-info p,
+.main .trip-aims p {
+  margin-top: 3px;
+}
+
+.main .trip-title {
+  font-family: "Lobster regular", sans-serif;
+  font-size: 30px;
+  margin: 0 auto;
+  color: #007cad;
+  text-shadow: 0 2px 3px #bebebe;
+}
+
+.main .aims-title {
+  font-family: "Lobster regular", sans-serif;
+  font-size: 25px;
+  margin-top: 20px;
+  color: #007cad;
+  text-shadow: 0 2px 3px #bebebe;
+  text-align: center;
+}
+
+.main .trip-wrapper {
+  height: 100%;
+  padding: 50px;
+  background-color: white;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .trip-add-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+}
+
+.main .trip-block,
+.main .aim-block {
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid #cecece;
+}
+
+.main .trip-info-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.main .trip-aim-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px 0 5px;
+}
+
+.main .trip-info,
+.main .trip-aims {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.main .trip-status-open {
+  font-weight: 700;
+  color: green;
+}
+
+.main .trip-status-closed {
+  font-weight: 700;
+  color: red;
+}
+
+.main .trip-info-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin-top: 5px;
+}
+
+.main .trip-info-table td {
+  font-family: "Roboto light", sans-serif;
+  font-size: 14px;
+  border: 1px solid #bebebe;
+  overflow-y: scroll;
+  padding: 5px 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.main .trip-info-table td:first-child,
+.main .trip-info-table .budget-title {
+  width: 28%;
+  font-family: "Lobster regular", sans-serif;
+  font-size: 16px;
+  background-color: rgba(0, 183, 255, 0.3);
+}
+
+.main .trip-info-table .budget-td {
+  font-size: 12px;
+  font-weight: 700;
+  width: 14%;
+}
+
+.main .trip-aims-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
+.main .trip-aims-table td {
+  font-family: "Roboto light", sans-serif;
+  font-size: 14px;
+  border: 1px solid #bebebe;
+  overflow-y: scroll;
+  padding: 5px 10px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.main .trip-aims-table td:first-child,
+.main .trip-aims-table td:nth-child(3) {
+  width: 25%;
+  font-family: "Lobster regular", sans-serif;
+  font-size: 16px;
+  background-color: rgba(175, 232, 255, 0.3);
+}
+
+.main .trip-aims-table td:nth-child(3) {
+  width: 20%;
+  text-align: center;
+  color: #1b8f1b;
+  text-shadow: 0 1px 2px #bebebe;
+}
+
+.main .trip-aims-table .aim-description {
+  max-height: 70px;
+  overflow-y: scroll;
+}
+
+.main .trip-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .trip-info-table td input {
+  padding: 2px 5px;
+  width: 150px;
+  font-size: 12px;
+}
+
+.main .trip-info-table .tripBudget {
+  width: 45px;
+}
+
+.footer {
+  background-color: #0073c0;
+}
+
+.footer .content {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 2px 1px black;
+}
+/*# sourceMappingURL=main.css.map */

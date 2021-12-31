@@ -1,0 +1,12 @@
+.footer {
+    background-color: $secondary-background-color;
+    font-size: 14px;
+    border-top: 1px solid #e2e1e1;
+    position: relative;
+    z-index: 5;
+
+    .content {
+        padding: 20px;
+        justify-content: center;
+    }
+}

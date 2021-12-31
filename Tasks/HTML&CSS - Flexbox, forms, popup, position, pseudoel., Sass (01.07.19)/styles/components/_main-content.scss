@@ -1,0 +1,92 @@
+.main {
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+
+    .content {
+        justify-content: space-between;
+        color: $primary-text-color;
+    }
+
+    &_sidebar {
+        background-color: $secondary-background-color;
+        border: 1px solid #e2e1e1;
+        font-size: 16px;
+        max-width: 200px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &_content_wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    &_content {
+        font-size: 13px;
+        line-height: 1.3;
+        background-color:$secondary-background-color;
+        border: 1px solid #e2e1e1;
+        padding: 20px 15px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_content_cards {
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .card {
+        @include main-box-shadow($box-shadow-color);
+    
+        font-size: 13px;
+        text-align: center;
+        vertical-align: top;
+        width: 32%;
+        margin-bottom: 15px;
+        background-color: $primary-background-color;
+        border: 1px solid #e2e1e1;
+        border-radius: 5px;
+        padding: 20px;
+        position: relative;
+        color: $primary-text-color;
+    }
+    
+    .card:nth-child(3n + 2) {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+    .card img {
+        width: $image-width;
+        text-align: center;
+    }
+    
+    .card ul {
+        list-style-image: url(/images/star.svg);
+        text-align: left;
+        padding-left: 15px;
+    }
+    
+    .logo_card {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: -15px;
+        right: -35px;
+    }
+}
+
+.main_content + .main_content {
+    margin-top: 15px;
+}

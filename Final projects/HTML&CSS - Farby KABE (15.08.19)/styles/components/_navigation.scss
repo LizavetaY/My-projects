@@ -1,0 +1,24 @@
+.navigation {
+    display: flex;
+
+    .contact-wrapper,
+    .drop-menu-block-hover,
+    .cart-product-wrapper,
+    .bottom-banner-card,
+    .bottom-info-link,
+    .main-category-choose,
+    .category-card-link,
+    .productpage-category-info-link,
+    .product-card-link,
+    .product-card-button-link,
+    .footer-block-left-link,
+    .popup-link {
+        text-decoration: none;
+    }
+
+    .bottom-banner-card {
+        width: 33.33%;
+    }
+
+
+}
