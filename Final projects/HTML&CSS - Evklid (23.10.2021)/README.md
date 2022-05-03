@@ -10,11 +10,13 @@ https://lizavetay.github.io/evklid/
 # USED LANGUAGES
 - HTML
 - CSS
+- JS
 
 # TASKS
 1) Create a pixel-perfect project using a maket;
 2) Use different CSS properties;
-3) Make a pixel-perfect mobile adaptive layout.
+3) Make a pixel-perfect mobile adaptive layout;
+4) Realize buttons' functionality with JS.
 
 # USED TECHNOLOGIES / SOLUTIONS
 - The CSS normilize is used;
@@ -24,7 +26,8 @@ https://lizavetay.github.io/evklid/
 - Pseudoelements;
 - Transitions and transforms;
 - Variables;
-- Position (relative and absolute).
+- Position (relative and absolute);
+- Aria-label's atributes.
 
 # DATE OF CREATING
-23.10.2021
+23.10.2021 (edit 03.05.2022)
