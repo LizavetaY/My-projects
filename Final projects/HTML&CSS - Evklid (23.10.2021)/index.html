@@ -7,13 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Evklid</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Swiper script -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- Accordion script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
 
 <body>
   <header class="header flex">
     <div class="header__container container flex">
-      <button class="burger btn-reset visually-hidden">
+      <button class="burger btn-reset hidden" aria-label="Найти">
         <span class="burger__line"></span>
       </button>
       <a class="header__logo" href="#">
@@ -37,20 +43,38 @@
             <a class="header__item-link" href="#">Контакты</a>
           </li>
         </ul>
-        <button class="header__item-btn btn-reset"></button>
+        <div class="search__container">
+          <button class="header__btn-search search__btn btn-reset" aria-label="Найти"></button>
+          <div class="search__wrapper hidden">
+            <form class="search__form">
+              <input class="search__input input-reset" type="search" name="search" placeholder="Что будем искать?">
+            </form>
+            <button class="search__btn-close btn-reset" aria-label="Закрыть"></button>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="section-hero section-spaces">
-      <div class="hero__container container flex">
-        <h1 class="hero__main-title">Проектные решения любой сложности</h1>
-        <p class="hero__descr">
-          Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом
-          проектантов
-        </p>
-        <button class="hero__btn btn-reset btn">Заказать расчёт</button>
+      <div class="hero__container container">
+        <div class="hero__content-wrapper flex">
+          <h1 class="hero__main-title">Проектные решения любой сложности</h1>
+          <p class="hero__descr">
+            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом
+            проектантов
+          </p>
+          <button class="hero__btn btn-reset btn">Заказать расчёт</button>
+        </div>
+        <div class="hero__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="hero-slide-1 swiper-slide"></div>
+            <div class="hero-slide-2 swiper-slide"></div>
+            <div class="hero-slide-3 swiper-slide"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
     <section class="section-spaces">
@@ -99,13 +123,13 @@
       <div class="container">
         <h2 class="stages__title section-title">Как мы&nbsp;работаем</h2>
         <div class="stages__btn-wrapper flex">
-          <button class="stages__btn-1 stages__btn btn-reset btn">1&nbsp;шаг</button>
-          <button class="stages__btn-2 stages__btn btn-reset btn">2&nbsp;шаг</button>
-          <button class="stages__btn-3 stages__btn btn-reset btn">3&nbsp;шаг</button>
-          <button class="stages__btn-4 stages__btn btn-reset btn">4&nbsp;шаг</button>
+          <button class="stages__btn btn-reset btn stages__btn-active" data-path="one">1&nbsp;шаг</button>
+          <button class="stages__btn btn-reset btn" data-path="two">2&nbsp;шаг</button>
+          <button class="stages__btn btn-reset btn" data-path="three">3&nbsp;шаг</button>
+          <button class="stages__btn btn-reset btn" data-path="four">4&nbsp;шаг</button>
         </div>
         <ul class="list-reset">
-          <li class="stages__item stages__item-1">
+          <li class="stages__item stages__item-1 stages__item-active" data-target="one">
             <h3 class="stages__item-subtitle">Проводим консультацию</h3>
             <p class="stages__item-descr">
               Влечет за&nbsp;собой процесс внедрения и модернизации приоритизации разума над эмоциями.
@@ -120,7 +144,7 @@
             <button class="stages__item-btn-more btn-reset btn">Подробнее</button>
             <button class="stages__item-btn-contract btn-reset btn">Договор</button>
           </li>
-          <li class="stages__item stages__item-2 visually-hidden">
+          <li class="stages__item stages__item-2" data-target="two">
             <h3 class="stages__item-subtitle">Составляем смету</h3>
             <p class="stages__item-descr">
               Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных
@@ -133,7 +157,7 @@
             <button class="stages__item-btn-more btn-reset btn">Подробнее</button>
             <button class="stages__item-btn-contract btn-reset btn">Договор</button>
           </li>
-          <li class="stages__item stages__item-3 visually-hidden">
+          <li class="stages__item stages__item-3" data-target="three">
             <h3 class="stages__item-subtitle">Привлекаем подрядчиков</h3>
             <p class="stages__item-descr">
               Идейные соображения высшего порядка, а&nbsp;также новая модель организационной деятельности требует
@@ -148,7 +172,7 @@
             <button class="stages__item-btn-more btn-reset btn">Подробнее</button>
             <button class="stages__item-btn-contract btn-reset btn">Договор</button>
           </li>
-          <li class="stages__item stages__item-4 visually-hidden">
+          <li class="stages__item stages__item-4" data-target="four">
             <h3 class="stages__item-subtitle">Инспектируем все этапы работ</h3>
             <p class="stages__item-descr">
               Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
@@ -166,27 +190,31 @@
     <section class="section-spaces">
       <div class="container">
         <h2 class="faq__title section-title">Часто задаваемые вопросы</h2>
-        <ul class="list-reset">
-          <li class="faq__item">
-            <a class="faq__item-link flex" href="#">
+        <ul id="accordion" class="list-reset">
+          <li class="faq__item" tabindex="0">
+            <h3 class="faq__item-title flex">
               Из&nbsp;чего формируется конечная стоимость проекта?
-            </a>
-            <div class="faq__item-descr-wrapper visually-hidden">
+            </h3>
+            <div class="faq__item-descr-wrapper">
               <p class="faq__item-descr">
-                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас
                 к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
-                Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных
+                Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных
                 требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий
                 пример
                 континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие
                 нормы
                 этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас
-                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты
+                на&nbsp;роль
                 ключевых факторов.
               </p>
               <p class="faq__item-descr">
                 Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
-                к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев
+                к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определенных
+                слоев
                 населения, а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
                 но&nbsp;неопровержимые выводы, а&nbsp;также многие известные личности призывают нас к&nbsp;новым
                 свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном
@@ -194,38 +222,111 @@
               </p>
             </div>
           </li>
-          <li class="faq__item">
-            <a class="faq__item-link flex" href="#">
+          <li class="faq__item" tabindex="0">
+            <h3 class="faq__item-title flex">
               У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/
               реализовать?
-            </a>
-            <div class="faq__item-descr-wrapper visually-hidden">
-              <p class="faq__item-descr"></p>
+            </h3>
+            <div class="faq__item-descr-wrapper">
+              <p class="faq__item-descr">
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных
+                требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий
+                пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие
+                нормы
+                этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты
+                на&nbsp;роль
+                ключевых факторов.
+              </p>
             </div>
           </li>
-          <li class="faq__item">
-            <a class="faq__item-link flex" href="#">
+          <li class="faq__item" tabindex="0">
+            <h3 class="faq__item-title flex">
               Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
-            </a>
-            <div class="faq__item-descr-wrapper visually-hidden">
-              <p class="faq__item-descr"></p>
+            </h3>
+            <div class="faq__item-descr-wrapper">
+              <p class="faq__item-descr">
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных
+                требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий
+                пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие
+                нормы
+                этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты
+                на&nbsp;роль
+                ключевых факторов.
+              </p>
+              <p class="faq__item-descr">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определенных
+                слоев
+                населения, а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                но&nbsp;неопровержимые выводы, а&nbsp;также многие известные личности призывают нас к&nbsp;новым
+                свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном
+                свете.
+              </p>
+              <p class="faq__item-descr">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определенных
+                слоев
+                населения, а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                но&nbsp;неопровержимые выводы, а&nbsp;также многие известные личности призывают нас к&nbsp;новым
+                свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном
+                свете.
+              </p>
             </div>
           </li>
-          <li class="faq__item">
-            <a class="faq__item-link flex" href="#">
+          <li class="faq__item" tabindex="0">
+            <h3 class="faq__item-title flex">
               Могу ли я делегировать вам работу / согласование с&nbsp;подрядчиком /
               организацией?
-            </a>
-            <div class="faq__item-descr-wrapper visually-hidden">
-              <p class="faq__item-descr"></p>
+            </h3>
+            <div class="faq__item-descr-wrapper">
+              <p class="faq__item-descr">
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+              </p>
             </div>
           </li>
-          <li class="faq__item">
-            <a class="faq__item-link flex" href="#">
+          <li class="faq__item" tabindex="0">
+            <h3 class="faq__item-title flex">
               Могу ли я вернуть деньги на&nbsp;каком-либо из этапов работ?
-            </a>
-            <div class="faq__item-descr-wrapper visually-hidden">
-              <p class="faq__item-descr"></p>
+            </h3>
+            <div class="faq__item-descr-wrapper">
+              <p class="faq__item-descr">
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
+                нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы.
+                Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью
+                первоочередных
+                требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий
+                пример
+                континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие
+                нормы
+                этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас
+                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты
+                на&nbsp;роль
+                ключевых факторов.
+              </p>
+              <p class="faq__item-descr">
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
+                к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определенных
+                слоев
+                населения, а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные,
+                но&nbsp;неопровержимые выводы, а&nbsp;также многие известные личности призывают нас к&nbsp;новым
+                свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном
+                свете.
+              </p>
             </div>
           </li>
         </ul>
@@ -266,7 +367,7 @@
         </nav>
         <ul class="footer__left-social-list list-reset flex">
           <li class="footer__left-social-item">
-            <a class="footer__left-social-link" href="#">
+            <a class="footer__left-social-link" href="#" aria-label="Социальная сеть Facebook">
               <svg class="footer__left-social-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M30 0C13.5 0 0 13.5241 0 30.1807C0 45.241 10.98 57.741 25.32 60V38.9157H17.7V30.1807H25.32V23.5241C25.32 15.9639 29.79 11.8072 36.66 11.8072C39.93 11.8072 43.3499 12.3795 43.3499 12.3795V19.8193H39.57C35.85 19.8193 34.68 22.1386 34.68 24.5181V30.1807H43.0199L41.6699 38.9157H34.68V60C41.7493 58.8791 48.1866 55.2576 52.8297 49.7893C57.4729 44.3211 60.016 37.3664 59.9999 30.1807C59.9999 13.5241 46.4999 0 30 0Z"
@@ -275,7 +376,7 @@
             </a>
           </li>
           <li class="footer__left-social-item">
-            <a class="footer__left-social-link" href="#">
+            <a class="footer__left-social-link" href="#" aria-label="Социальная сеть VKontakte">
               <svg class="footer__left-social-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568 60 60 46.5686 60 30C60 13.4314 46.568 0 30 0ZM45.2176 33.2446C46.6159 34.6103 48.0951 35.8957 49.3504 37.4026C49.9065 38.0692 50.4307 38.7585 50.8297 39.5337C51.3993 40.6392 50.8849 41.8515 49.8954 41.9171L43.7494 41.9159C42.162 42.0473 40.8988 41.4071 39.8339 40.3218C38.9837 39.457 38.195 38.5332 37.3762 37.6389C37.0416 37.2718 36.6893 36.9262 36.2695 36.6543C35.4316 36.1093 34.7036 36.2762 34.2236 37.1515C33.7344 38.0421 33.6227 39.0292 33.5761 40.0205C33.5092 41.4697 33.0721 41.8484 31.618 41.9165C28.5109 42.062 25.5628 41.5906 22.8227 40.0241C20.4055 38.6425 18.5346 36.6924 16.9043 34.4845C13.7297 30.1805 11.2984 25.4566 9.11386 20.597C8.6222 19.5026 8.98189 18.917 10.1893 18.8943C12.1952 18.8557 14.2011 18.8606 16.2071 18.8925C17.0234 18.9054 17.5636 19.3725 17.8772 20.1428C18.9612 22.8098 20.2901 25.3473 21.9554 27.7007C22.3992 28.3274 22.8522 28.9522 23.4973 29.3948C24.2093 29.8834 24.7519 29.7219 25.0877 28.9271C25.3025 28.4219 25.3952 27.8817 25.4418 27.3404C25.6014 25.486 25.6205 23.6323 25.3442 21.7854C25.1724 20.6296 24.5224 19.8832 23.3702 19.6647C22.7834 19.5536 22.8694 19.3363 23.1548 19.0011C23.6501 18.4217 24.1142 18.0632 25.0416 18.0632L31.9857 18.062C33.0801 18.2768 33.3256 18.7679 33.4742 19.8703L33.4803 27.5871C33.4674 28.0137 33.6945 29.2782 34.4606 29.5574C35.0744 29.76 35.4795 29.2677 35.8465 28.8792C37.5118 27.112 38.6983 25.0263 39.7608 22.8675C40.2298 21.9155 40.6343 20.9303 41.0271 19.9433C41.3193 19.2135 41.7735 18.8544 42.5972 18.8667L49.2841 18.8747C49.4811 18.8747 49.6812 18.8765 49.8764 18.9103C51.0034 19.103 51.3121 19.5879 50.9635 20.6873C50.4147 22.4145 49.3485 23.8533 48.3063 25.2958C47.1892 26.8401 45.9977 28.3304 44.8917 29.8815C43.8752 31.2994 43.9556 32.0133 45.2176 33.2446Z"
@@ -284,7 +385,7 @@
             </a>
           </li>
           <li class="footer__left-social-item">
-            <a class="footer__left-social-link" href="#">
+            <a class="footer__left-social-link" href="#" aria-label="Социальная сеть Instagram">
               <svg class="footer__left-social-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M24.2578 30C24.2578 33.1714 26.8286 35.7422 30 35.7422C33.1714 35.7422 35.7422 33.1714 35.7422 30C35.7422 26.8286 33.1714 24.2578 30 24.2578C26.8286 24.2578 24.2578 26.8286 24.2578 30Z"
@@ -305,19 +406,31 @@
         <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
           <ul class="form__list list-reset flex">
             <li class="form__item">
-              <input class="form__input" type="text" name="User name" placeholder="Фамилия, имя и&nbsp;отчество*"
-                required>
+              <label>
+                <span class="visually-hidden">Введите свою фамилию, имя и отчество</span>
+                <input class="form__input" type="text" name="User name" placeholder="Фамилия, имя и&nbsp;отчество*"
+                  required>
+              </label>
             </li>
             <li class="form__item">
-              <input class="form__input" type="email" name="E-mail" placeholder="E-mail*" required>
+              <label>
+                <span class="visually-hidden">Введите свой E-mail</span>
+                <input class="form__input" type="email" name="E-mail" placeholder="E-mail*" required>
+              </label>
             </li>
             <li class="form__item">
-              <textarea class="form__input form__input-textarea" name="Comment" placeholder="Сообщение"></textarea>
+              <label>
+                <span class="visually-hidden">Введите свой комментарий</span>
+                <textarea class="form__input form__input-textarea" name="Comment" placeholder="Сообщение"></textarea>
+              </label>
             </li>
             <li class="form__item flex">
               <button class="form__item-btn btn-reset btn">Отправить данные</button>
-              <input class="form__input-agreement" id="agreement" type="checkbox" name="Agreement" required>
-              <label class="form__text-agreement" for="agreement">Согласен на&nbsp;обработку данных</label>
+              <div class="form__item-agreement-wrapper flex">
+                <input class="form__input-agreement" id="agreement" type="checkbox" name="Agreement" required>
+                <label class="form__text-agreement" for="agreement">Согласен на&nbsp;обработку
+                  данных</label>
+              </div>
             </li>
           </ul>
         </form>
@@ -330,6 +443,7 @@
       </p>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
