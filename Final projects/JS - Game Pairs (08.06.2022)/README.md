@@ -35,4 +35,4 @@ https://lizavetay.github.io/game-pairs/
 - Simple HTML and CSS layout.
 
 # DATE OF CREATING
-09.06.2022
+08.06.2022
