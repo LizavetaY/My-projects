@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game pairs</title>
+
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./script/main.js"></script>
+</head>
+
+<body>
+  <header class="header flex">
+    <div class="header__container container flex">
+      <div class="header__logo">
+        <img src="./img/header/logo.png" alt="Game pairs logo - leaves">
+      </div>
+      <nav class="header__nav flex">
+        <ul class="header__list list-reset flex">
+          <li class="header__item">
+            <a href="./index.html" class="header__item-link">Home page</a>
+          </li>
+          <li class="header__item">
+            <a href="./about.html" class="header__item-link">How to play</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__container container flex">
+      <h1 class="main__menu-title title">Game pairs</h1>
+      <form class="form">
+        <ul class="form__list list-reset flex">
+          <li class="form__item">
+            <label>
+              <div class="form__item-input-wrapper flex">
+                <input class="form__item-input input-reset" type="text">
+                <span class="form__item-input-info">
+                  The game will be started with <b><span id="input-qty-text">0</span></b> rows and columns
+                </span>
+              </div>
+              <span>
+                Enter an even number of cards in the row/column from 2 to 10
+              </span>
+            </label>
+          </li>
+          <li class="form__item">
+            <input id="timer-on" class="form__item-timeron-input visually-hidden" type="checkbox" name="timerOn">
+            <label class="form__item-timeron-text" for="timer-on">
+              Do you want to play with a timer?
+            </label>
+          </li>
+          <li class="form__item">
+            <button id="start-game-btn" class="btn-reset btn" type="submit" disabled>Start game</button>
+          </li>
+        </ul>
+      </form>
+      <div class="game__wrapper hidden">
+        <div class="game__cards-wrapper flex"></div>
+        <div class="game__info-wrapper flex">
+          <div class="game__info-timer-wrapper hidden">
+            <span>Time left:</span>
+            <span class="game__info-timer"></span>
+          </div>
+          <button class="btn-reset btn hidden">Pause game</button>
+          <button class="game__info-btn-finish btn-reset btn">Finish game</button>
+        </div>
+        <div class="game__repeat-wrapper hidden">
+          <div class="game__repeat-content flex">
+            <p class="game__repeat-status-text hidden"></p>
+            <p class="game__repeat-text">Do you want to repeat the game?</p>
+            <div class="game__repeat-btn-wrapper flex">
+              <button class="btn-reset btn">Yes</button>
+              <button class="btn-reset btn">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="game__resume-wrapper hidden">
+          <div class="game__resume-content flex">
+            <p class="game__resume-text">Are you ready to resume the game?</p>
+            <div class="game__resume-btn-wrapper flex">
+              <button class="btn-reset btn">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

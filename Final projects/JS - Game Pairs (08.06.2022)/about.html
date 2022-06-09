@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game pairs</title>
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script>
+        localStorage.clear();
+    </script>
+    <script defer src="./script/main.js"></script>
+</head>
+
+<body>
+    <header class="header flex">
+        <div class="header__container container flex">
+            <div class="header__logo">
+                <img src="./img/header/logo.png" alt="Game pairs logo - leaves">
+            </div>
+            <nav class="flex header__nav">
+                <ul class="header__list list-reset flex">
+                    <li class="header__item">
+                        <a href="./index.html" class="header__item-link">Home page</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./about.html" class="header__item-link">How to play</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container about-page container flex">
+            <h1 class="main__about-title title">How to play</h1>
+            <div class="main__about-info-wrapper flex">
+                <p class="main__about-text">How to fill the main page:</p>
+                <ul class="main__about-list list-reset">
+                    <li class="main__about-item">
+                        <strong>First input:</strong> It affords you to choose <i>Level of difficulty</i>. You can
+                        choose the number of cards in the row and column displayed thanks to the inserted value into the
+                        input.
+                        <br><br>
+                        <i>* Be careful: this value is not a quantity of cards pairs or of all cards in the game</i>
+                        <br><br>
+                        There are available values:
+                        <ul class="list-reset">
+                            <li>2 cards - 2 pars</li>
+                            <li>4 cards - 8 pars</li>
+                            <li>6 cards - 18 pars</li>
+                            <li>8 cards - 32 pars</li>
+                            <li>10 cards - 50 pars</li>
+                        </ul>
+                    </li>
+                    <li class="main__about-item">
+                        <strong>Second checkbox:</strong> If you check it, the game will go with the timer. The timer
+                        value depends on cards you insert into the first input:
+                        <ul class="list-reset">
+                            <li>2 cards - 5 sec</li>
+                            <li>4 cards - 25 sec</li>
+                            <li>6 cards - 50 sec</li>
+                            <li>8 cards - 85 sec</li>
+                            <li>10 cards - 130 sec</li>
+                        </ul>
+                    </li>
+                    <li class="main__about-item">
+                        <strong>Start game button:</strong> It will start the game with your inserted data (the timer
+                        can be turned off)
+                    </li>
+                </ul>
+                <p class="main__about-text">How to play in the game pairs:</p>
+                <ul class="main__about-list list-reset">
+                    <li class="main__about-item">
+                        Open cards in the field and <strong>find same</strong>
+                    </li>
+                    <li class="main__about-item">
+                        <strong>Only two card can be opened</strong> in one time
+                    </li>
+                    <li class="main__about-item">
+                        Found pairs will be opened and deactivated
+                    </li>
+                    <li class="main__about-item">
+                        You can <strong>finish</strong> the game <strong>at any time</strong>
+                    </li>
+                    <li class="main__about-item">
+                        If you <strong>play with the timer</strong>, hurry up to find all pairs in time
+                    </li>
+                    <li class="main__about-item">
+                        You can <strong>pause the game</strong>, if you need a break during playing the game with the
+                        timer
+                    </li>
+                    <li class="main__about-item">
+                        Don't be afraid to lose your game during reloading. It <strong>will be saved</strong>
+                    </li>
+                    <li class="main__about-item">
+                        And you can load a new game with similar conditions, when the main game is finished
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
