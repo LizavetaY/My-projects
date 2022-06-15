@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students Lab</title>
+
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./script/main.js"></script>
+</head>
+
+<body>
+  <header class="header flex">
+    <div class="header__container container flex">
+      <nav>
+        <ul class="header__list list-reset">
+          <li class="header__item">
+            <a href="./index.html" class="header__item-link flex">
+              <img src="./img/header/logo.png" alt="Students Lab logo">
+              Students Lab
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main__container container flex">
+      <h1 class="main__title title visually-hidden">Students Lab</h1>
+      <section class="main__filter-wrapper">
+        <h2 class="main__filter-title title">Filters</h2>
+        <form class="main__filter-form flex">
+          <label class="main__filter-item flex">
+            <span class="main__filter-item-span">Name of student</span>
+            <input class="main__filter-item-input" type="text">
+          </label>
+          <label class="main__filter-item flex">
+            <span class="main__filter-item-span">Faculty</span>
+            <input class="main__filter-item-input" type="text">
+          </label>
+          <label class="main__filter-item flex">
+            <span class="main__filter-item-span">Start year of study</span>
+            <input class="main__filter-item-input" type="text">
+            <span class="main__filter-item-info"></span>
+          </label>
+          <label class="main__filter-item flex">
+            <span class="main__filter-item-span">Last year of study</span>
+            <input class="main__filter-item-input" type="text">
+            <span class="main__filter-item-info"></span>
+          </label>
+          <button class="main__filter-close-btn btn-reset btn" type="submit" disabled></button>
+        </form>
+      </section>
+      <section class="main__table-wrapper flex">
+        <h2 class="main__table-title title">Information</h2>
+        <div class="main__table-btn-wrapper flex">
+          <button id="add-student-button" class="btn-reset btn">Add a student</button>
+        </div>
+        <table class="main__table">
+          <thead class="main__table-head">
+            <tr>
+              <td>Full name</td>
+              <td>Faculty</td>
+              <td>Age</td>
+              <td>Study years</td>
+              <td>Edit</td>
+            </tr>
+          </thead>
+          <tbody class="main__table-body"></tbody>
+        </table>
+      </section>
+      <div class="main__popup-wrapper hidden">
+        <form class="popup__form flex">
+          <h3 class="popup__title title"></h3>
+          <div class="popup__btn-close btn"></div>
+          <label class="popup__item flex">
+            <span class="popup__item-span">Name of student *</span>
+            <input class="popup__item-input" type="text">
+          </label>
+          <label class="popup__item flex">
+            <span class="popup__item-span">Surname *</span>
+            <input class="popup__item-input" type="text">
+          </label>
+          <label class="popup__item flex">
+            <span class="popup__item-span">Middle name *</span>
+            <input class="popup__item-input" type="text">
+          </label>
+          <label class="popup__item flex">
+            <span class="popup__item-span">Date of birth *</span>
+            <input class="popup__item-input" type="date">
+          </label>
+          <label class="popup__item flex">
+            <span class="popup__item-span">Start year of study *</span>
+            <input class="popup__item-input" type="text">
+          </label>
+          <label class="popup__item flex">
+            <span class="popup__item-span">Faculty *</span>
+            <input class="popup__item-input" type="text">
+          </label>
+          <ul class="popup__mistakes-wrapper list-reset hidden">
+            <li class="popup__mistake-year hidden">Start year of study is equal from 2000 to present</li>
+            <li class="popup__mistake-inputs hidden">All inputs are required</li>
+          </ul>
+          <div class="popup__btn-wrapper flex">
+            <button id="create-student-button" class="btn-reset btn hidden" type="submit" disabled>Create</button>
+            <button id="edit-student-button" class="btn-reset btn hidden" type="submit" disabled>Edit</button>
+            <button id="delete-student-button" class="popup__btn-delete btn-reset btn hidden"
+              type="submit">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
